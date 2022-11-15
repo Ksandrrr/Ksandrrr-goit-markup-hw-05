@@ -412,20 +412,25 @@ nav > ul {
   justify-content: center;
   width: 44px;
   height: 44px;
-  fill: var(--fill-main-color);
   border-radius: 50%;
 
-  transition: fill, background-color 250ms;
+  transition: background-color 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icon {
+  fill: var(--fill-main-color);
+  transition: fill, 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-link:hover .icon {
+  fill: var(--last-text-color);
+
 }
 .social-link:hover,
 .social-link:focus {
-  fill: var(--last-text-color);
   background-color: var(--brand-color);
 }
-.social-icon {
-  fill: currentColor;
-}
+
 /* Секція Постійні Клієнти */
 .regular-customers {
   padding-top: 94px;
@@ -569,14 +574,14 @@ nav > ul {
   letter-spacing: 0.03em;
 
 }
-.list-portfolio-item-1:hover .list-portfolio-overlay {
+.list-portfolio-item-link:hover .list-portfolio-overlay {
   transform: translatey(0);
 }
 /**/
 .list-portfolio a {
   display: block;
   transition: box-shadow 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list-portfolio a:hover,
 .list-portfolio a:focus {
